@@ -1,9 +1,9 @@
-# GitHub Link:
+## GitHub Link:
 ![Online] 
 https://github.com/ST10469550/MbongeniStylesBoutique
 https://github.com/ST10469550/MbongeniStylesBoutique/edit/main/README.md
 
-## ALL IMAGES WERE CREATED USING COPILOT AI AND I CAN BROWS MY HISTORY
+# ALL IMAGES WERE CREATED USING COPILOT AI AND I CAN BROWS MY HISTORY
 
 
 <img width="1024" height="1536" alt="KIDS GIRLS JACKETS__01" src="https://github.com/user-attachments/assets/58f1e6de-d8a8-4027-b040-3f163b82ff45" />
