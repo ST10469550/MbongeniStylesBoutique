@@ -1,4 +1,13 @@
-## GitHub Link:
+# Mbongeni Styles Boutique
+
+## Table of Contents
+
+-[IMAGES](#IMAGES)
+-[GitHub Repository](#GitHubRepository)
+-[P-2 Website Update Log ](#P-2WebsiteUpdateLog)
+
+
+## GitHub Repository:
 ![Online] 
 https://github.com/ST10469550/MbongeniStylesBoutique
 https://github.com/ST10469550/MbongeniStylesBoutique/edit/main/README.md
@@ -37,3 +46,58 @@ https://github.com/ST10469550/MbongeniStylesBoutique/edit/main/README.md
 <img width="1024" height="1536" alt="KIDS BOYS JACKETS__01" src="https://github.com/user-attachments/assets/d5df206c-c0b3-4426-a1b9-d3f75f0b4db2" />
 <img width="1024" height="1536" alt="KIDS BOYS T-Shirts__01" src="https://github.com/user-attachments/assets/a90815b4-bf5b-4cd3-b1d7-3cca9a61a0ea" />
 <img width="1024" height="1536" alt="KIDS GIRLS T-Shirts__01" src="https://github.com/user-attachments/assets/d78372f2-8dfa-4228-b860-aea372fc1709" />
+
+# Mbongeni’s Style Boutique —
+# P-2 Website Update Log  
+**Date:** 29 September 2025  
+
+## What I Worked On
+
+Today I focused on refining the layout and user experience of my fashion brand’s website. I wanted the site to feel premium, responsive, and true to the South African heritage that inspires my designs.
+
+## Changes I Made
+
+### 1. Fixed Navigation Bar  
+- Made the main navigation bar stay at the top of the screen using `position: fixed`.  
+- Added `z-index: 1000` and `box-shadow` for layering and visual depth.  
+- Increased `padding-top` on the header to prevent content overlap.
+
+### 2. Resized Images  
+- Blog and product images were too large and disrupted the layout.  
+- Added `max-width` and `max-height` constraints to keep visuals clean and proportional.  
+- Ensured images scale properly across devices.
+
+### 3. Responsive Layout  
+- Added media queries for mobile screens.  
+- Navigation links stack vertically on smaller devices.  
+- Adjusted font sizes and padding for better readability.
+
+### 4. Styling Enhancements  
+- Gold accents for headings, buttons, and hover effects to match the brand’s luxury vibe.  
+- Consistent typography using `'Poppins', sans-serif`.  
+- Clean spacing and dark background for a bold, elegant aesthetic.
+
+## Navigation Header Issues I Solved
+
+This part gives me a headache.
+- Initially, the nav bar scrolled with the page — not ideal for a boutique site.  
+- After fixing it to the top, it started covering the header content.  
+- I had to tweak layout spacing and header padding to make everything line up properly.  
+- Now it’s smooth, fixed, and looks great across devices.
+
+##  Next Steps
+- Add a mobile menu toggle for smaller screens  
+- Create dropdowns for categories like “Women,” “Men,” and “Kids”  
+- Add scroll animations or transitions for extra polish  
+- Build a featured product slider or carousel  
+
+## Final Thoughts
+I’m proud of how the site is shaping up even thou its still need the same look and feel.  
+It’s clean, stylish, and rooted in the culture that inspires my brand.  
+This update was a big step forward — and I’m just getting started.
+
+
+
+
+
+
