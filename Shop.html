@@ -4,98 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop - Mbongeni's Style Boutique</title>
+  <link rel="stylesheet" href="Shop.css" />
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
     <h1>Shop Our Collections</h1>
+    <p>Explore curated fashion inspired by heritage and elegance.</p>
   </header>
 
+  <!-- Search & Filter -->
+  <section class="shop-controls">
+    <input type="text" placeholder="Search products..." />
+    <div class="filters">
+      <button onclick="filterCategory('women')">Women</button>
+      <button onclick="filterCategory('men')">Men</button>
+      <button onclick="filterCategory('kids')">Kids</button>
+      <button onclick="filterCategory('all')">All</button>
+    </div>
+  </section>
+
+  <!-- Product Sections -->
   <main>
-    <section>
+    <section id="women" class="product-category">
       <h2>Women</h2>
-      <article>
-        <img src="images/WMN JACKETS_01.png" alt="Trimmed Jacket">
-        <h3>Trimmed Jacket</h3>
-        <p>R1,899.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/WMN DRESS__01.png" alt="Elegant Maxi Dress">
-        <h3>Elegant Maxi Dress</h3>
-        <p>R2,499.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/WMN DRESS__02.png " alt="Women's Printed Dress">
-        <h3>Printed Heritage Dress</h3>
-        <p>R1,599.00</p>
-        <button>Add to Cart</button>
-      </article>
+      <div class="product-grid">
+        <article>
+          <img src="images/WMN JACKETS_01.png" alt="Trimmed Jacket">
+          <h3>Trimmed Jacket</h3>
+          <p>R1,899.00</p>
+          <button>Add to Cart</button>
+        </article>
+        <article>
+          <img src="images/WMN DRESS__01.png" alt="Elegant Maxi Dress">
+          <h3>Elegant Maxi Dress</h3>
+          <p>R2,499.00</p>
+          <button>Add to Cart</button>
+        </article>
+        <article>
+          <img src="images/WMN DRESS__02.png" alt="Printed Heritage Dress">
+          <h3>Printed Heritage Dress</h3>
+          <p>R1,599.00</p>
+          <button>Add to Cart</button>
+        </article>
+      </div>
     </section>
 
-    <section>
+    <section id="men" class="product-category">
       <h2>Men</h2>
-      <article>
-        <img src="images/MensJacket1.png" alt="Kente-Inspired T-Shirt">
-        <h3>Kente-Inspired T-Shirt</h3>
-        <p>R2,299.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/MEN SWEAT PANTS_01.png" alt="Tailored  Sweat Pants">
-        <h3>Tailored  Sweat Pants</h3>
-        <p>R1,199.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/MEN SWEATER__01.png" alt="Men's Sweater">
-        <h3>Heritage Knit Sweater</h3>
-        <p>R1,499.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/MEN " alt="Men's Jacket">
-        <h3>Structured Bomber Jacket</h3>
-        <p>R2,199.00</p>
-        <button>Add to Cart</button>
-      </article>
+      <div class="product-grid">
+        <article>
+          <img src="images/MensJacket1.png" alt="Kente-Inspired T-Shirt">
+          <h3>Kente-Inspired T-Shirt</h3>
+          <p>R2,299.00</p>
+          <button>Add to Cart</button>
+        </article>
+        <article>
+          <img src="images/MEN SWEAT PANTS_01.png" alt="Tailored Sweat Pants">
+          <h3>Tailored Sweat Pants</h3>
+          <p>R1,199.00</p>
+          <button>Add to Cart</button>
+        </article>
+        <article>
+          <img src="images/MEN SWEATER__01.png" alt="Heritage Knit Sweater">
+          <h3>Heritage Knit Sweater</h3>
+          <p>R1,499.00</p>
+          <button>Add to Cart</button>
+        </article>
+      </div>
     </section>
 
-    <section>
+    <section id="kids" class="product-category">
       <h2>Kids</h2>
-      <article>
-        <img src="images/MEN T-Shirt__01.png" alt="Men T-Shirt">
-        <h3>Men T-Shirt</h3>
-        <p>R799.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/KIDS GIRLS JACKETS__01.png" alt="Kids Ankara Jacket">
-        <h3>Kids Ankara Jacket</h3>
-        <p>R899.00</p>
-        <button>Add to Cart</button>
-      </article>
-      <article>
-        <img src="images/KIDS BOYS TRUCKSUITS__01.png" alt="Kids Boys Tracksuits">
-        <h3>Printed Tracksuit – Boys</h3>
-        <p>R999.00</p>
-        <button>Add to Cart</button>
-      </article>
+      <div class="product-grid">
+        <article>
+          <img src="images/MEN T-Shirt__01.png" alt="Men T-Shirt">
+          <h3>Men T-Shirt</h3>
+          <p>R799.00</p>
+          <button>Add to Cart</button>
+        </article>
+        <article>
+          <img src="images/KIDS GIRLS JACKETS__01.png" alt="Kids Ankara Jacket">
+          <h3>Kids Ankara Jacket</h3>
+          <p>R899.00</p>
+          <button>Add to Cart</button>
+        </article>
+        <article>
+          <img src="images/KIDS BOYS TRUCKSUITS__01.png" alt="Printed Tracksuit – Boys">
+          <h3>Printed Tracksuit – Boys</h3>
+          <p>R999.00</p>
+          <button>Add to Cart</button>
+        </article>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Mbongeni’s Style Boutique</p>
   </footer>
+
+  <!-- Filter Script -->
+  <script>
+    function filterCategory(category) {
+      const sections = document.querySelectorAll('.product-category');
+      sections.forEach(section => {
+        section.style.display = category === 'all' || section.id === category ? 'block' : 'none';
+      });
+    }
+  </script>
 
 </body>
 </html>

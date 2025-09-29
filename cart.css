@@ -1,0 +1,160 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 30px;
+    background: black;
+    flex-wrap: wrap;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: gold;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('images/MB.png') center/cover no-repeat;
+    color: white;
+  }
+  header h1 {
+    font-size: 2.5em;
+    color: gold;
+    margin-bottom: 10px;
+  }
+  
+  /* Cart Container */
+  .cart-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* Cart Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+  th {
+    background-color: gold;
+    color: black;
+  }
+  td {
+    border-bottom: 1px solid #333;
+  }
+  td img {
+    max-width: 80px;
+    border-radius: 5px;
+  }
+  
+  /* Quantity Input */
+  input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: white;
+  }
+  
+  /* Remove Button */
+  .remove-btn {
+    background: black;
+    color: gold;
+    border: 1px solid gold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .remove-btn:hover {
+    background: gold;
+    color: black;
+  }
+  
+  /* Cart Summary */
+  .cart-summary {
+    text-align: right;
+    margin-top: 30px;
+  }
+  .cart-summary h3 {
+    font-size: 1.5em;
+    color: gold;
+  }
+  
+  /* Checkout Button */
+  .checkout-btn {
+    background: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .checkout-btn:hover {
+    background: black;
+    color: gold;
+    border: 1px solid gold;
+  }
+  
+  /* Footer */
+  footer {
+    background: black;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    th {
+      display: none;
+    }
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: none;
+    }
+    td img {
+      max-width: 100%;
+    }
+    .cart-summary {
+      text-align: center;
+    }
+  }
+  

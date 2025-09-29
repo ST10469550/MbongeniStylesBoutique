@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart - Mbongeni's Style Boutique</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Your Shopping Cart</h1>
+  </header>
+
+  <!-- Cart Table -->
+  <div class="cart-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="images/WMN DRESS__01.png" alt="Elegant Maxi Dress" /></td>
+          <td>Elegant Maxi Dress</td>
+          <td>R2,499.00</td>
+          <td><input type="number" value="1" min="1" /></td>
+          <td><button class="remove-btn">Remove</button></td>
+        </tr>
+        <tr>
+          <td><img src="images/MEN SWEATER__01.png" alt="Heritage Knit Sweater" /></td>
+          <td>Heritage Knit Sweater</td>
+          <td>R1,499.00</td>
+          <td><input type="number" value="2" min="1" /></td>
+          <td><button class="remove-btn">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <h3>Total: R5,497.00</h3>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mbongeni’s Style Boutique</p>
+  </footer>
+
+</body>
+</html>

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mbongeni's Style Boutique</title>
+  <title>Mbongeni's Style Boutique - Locations</title>
+  <link rel="stylesheet" href="Locations.css" />
 </head>
 <body>
 
@@ -23,97 +24,43 @@
     <p>Luxury fashion inspired by South African heritage</p>
   </header>
 
-  <!-- Hero Section -->
-  <section aria-labelledby="hero-heading">
-    <h2 id="hero-heading">Own Your Style</h2>
-    <p>Shop exclusive collections, designed for elegance</p>
-    <a href="shop.html">Shop Now</a>
-  </section>
-
-  <!-- Clothing Categories -->
-  <main>
-    <section id="shop" aria-labelledby="products-heading">
-      <h2 id="products-heading">Shop by Category</h2>
-
-      <section aria-labelledby="women-heading">
-        <h3 id="women-heading">Women</h3>
-        <ul>
-          <li><img src="images/WMN DRESS.png" alt="Women's Dress" /></li>
-          <li><img src="images/Gold-Trimmed Blazer for Women.jpg" alt="Gold-Trimmed Blazer" /></li>
-          <li><img src="images/Elegant Maxi Dress.PNG.jpg" alt="Elegant Maxi Dress" /></li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="men-heading">
-        <h3 id="men-heading">Men</h3>
-        <ul>
-          <li><img src="images/MEN SWEATER.png" alt="Men's Sweater" /></li>
-          <li><img src="images/MEN JACKET.png" alt="Men's Jacket" /></li>
-          <li><img src="images/Tailored Linen Shirt.png" alt="Tailored Linen Shirt" /></li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="kids-heading">
-        <h3 id="kids-heading">Kids</h3>
-        <ul>
-          <li><img src="images/KIDS BOYS TRUCKSUITS.png" alt="Kids Boys Tracksuits" /></li>
-          <li><img src="images/Mini Heritage Hoodie.PNG" alt="Mini Heritage Hoodie" /></li>
-          <li><img src="images/Kids Ankara Print Dress.PNG.jpg" alt="Kids Ankara Print Dress" /></li>
-        </ul>
-      </section>
-    </section>
-
-    <!-- Blog section this is for our users to find out more about us our brand -->
-    <section id="blog" aria-labelledby="blog-heading">
-      <h2 id="blog-heading">From the Blog</h2>
-      <article>
-        <h3>Brand Storytelling</h3>
-        <img src="images/BRAND STORY TELLING.png" alt="Brand Storytelling" />
-      </article>
-      <article>
-        <h3>Founder Spotlight</h3>
-        <img src="images/Founder Monogeninc.png" alt="Founder Mbongeni" />
-      </article>
-    </section>
-  </main>
-
-  <!-- newsletter section for vip member only will be updated on limited editions  -->
-  <section aria-labelledby="newsletter-heading">
-    <h2 id="newsletter-heading">Join Our VIP Circle</h2>
-    <form>
-      <label for="email">Email address:</label>
-      <input type="email" id="email" name="email" placeholder="Your email address" />
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <!-- this is the locations & contact where user will be able to see our locations-->
-  <section id="locations" aria-labelledby="locations-heading">
+  <!-- Locations Section -->
+  <section class="locations" aria-labelledby="locations-heading">
     <h2 id="locations-heading">Our Boutiques</h2>
+
     <article>
       <h3>Johannesburg</h3>
       <p>44 Stanley Avenue, Milpark, Johannesburg</p>
-      <p>+27 11 555 0198</p>
-      <p>jhb@mbongeniboutique.co.za</p>
+      <p>Phone: +27 11 555 0198</p>
+      <p>Email: jhb@mbongenistyle.co.za</p>
+      <iframe src="https://www.google.com/maps?q=44+Stanley+Ave,+Milpark,+Johannesburg&output=embed" width="100%" height="300" loading="lazy"></iframe>
     </article>
+
+    <article>
+      <h3>Cape Town</h3>
+      <p>V&A Waterfront, Dock Road, Cape Town</p>
+      <p>Phone: +27 21 789 4560</p>
+      <p>Email: cpt@mbongenistyle.co.za</p>
+      <iframe src="https://www.google.com/maps?q=V&A+Waterfront,+Cape+Town&output=embed" width="100%" height="300" loading="lazy"></iframe>
+    </article>
+
     <article>
       <h3>Durban</h3>
-      <p>12 Florida Road, Morningside, Durban</p>
-      <p>+27 31 777 0421</p>
-      <p>dbn@mbongeniboutique.co.za</p>
+      <p>Gateway Theatre of Shopping, Umhlanga Ridge, Durban</p>
+      <p>Phone: +27 31 123 9876</p>
+      <p>Email: dbn@mbongenistyle.co.za</p>
+      <iframe src="https://www.google.com/maps?q=Gateway+Theatre+of+Shopping,+Durban&output=embed" width="100%" height="300" loading="lazy"></iframe>
     </article>
   </section>
 
-  <!-- footer section which will be displayed at the end of the page -->
-  <footer id="contact">
-    <p>&copy; 2025 Mbongeni’s Style Boutique | All rights reserved</p>
-    <nav aria-label="Footer navigation">
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Returns</a></li>
-      </ul>
-    </nav>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mbongeni’s Style Boutique. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://facebook.com" aria-label="Facebook">&#x1F426;</a>
+      <a href="https://instagram.com" aria-label="Instagram">&#x1F33F;</a>
+      <a href="https://twitter.com" aria-label="Twitter">&#x1F426;</a>
+    </div>
   </footer>
 
 </body>
