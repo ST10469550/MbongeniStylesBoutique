@@ -15,7 +15,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
-      <li><a href="cart.html">Cart</a></li>
+      <li><a href="cart.html" class="active">Cart</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -37,10 +37,9 @@
           <th>Remove</th>
         </tr>
       </thead>
-      <tbody>
-        <!-- No items in cart -->
+      <tbody id="cart-items">
         <tr>
-          <td colspan="5" style="text-align: center; padding: 40px; color: #ccc;">
+          <td colspan="5" style="text-align: center; padding: 40px; color: #777;">
             Your cart is currently empty.
           </td>
         </tr>
@@ -72,5 +71,73 @@
     <p>&copy; 2025 Mbongeni’s Style Boutique</p>
   </footer>
 
+  <!-- Cart Script -->
+  <script>
+    const cartTable = document.getElementById('cart-items');
+    const totalDisplay = document.querySelector('.cart-summary h3');
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    function renderCart() {
+      cartTable.innerHTML = '';
+
+      if (cartItems.length === 0) {
+        cartTable.innerHTML = `
+          <tr>
+            <td colspan="5" style="text-align: center; padding: 40px; color: #777;">
+              Your cart is currently empty.
+            </td>
+          </tr>`;
+        totalDisplay.textContent = 'Total: R0.00';
+        checkoutBtn.disabled = true;
+        return;
+      }
+
+      let total = 0;
+
+      cartItems.forEach((item, index) => {
+        const price = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+        total += price * (item.quantity || 1);
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td><img src="${item.image}" alt="${item.name}" /></td>
+          <td>${item.name}</td>
+          <td>R${price.toFixed(2)}</td>
+          <td>
+            <input type="number" min="1" value="${item.quantity || 1}" data-index="${index}" />
+          </td>
+          <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+        `;
+        cartTable.appendChild(row);
+      });
+
+      totalDisplay.textContent = `Total: R${total.toFixed(2)}`;
+      checkoutBtn.disabled = false;
+
+      // Remove items
+      document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', e => {
+          const i = e.target.dataset.index;
+          cartItems.splice(i, 1);
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+          renderCart();
+        });
+      });
+
+      // Update quantity
+      document.querySelectorAll('input[type="number"]').forEach(input => {
+        input.addEventListener('change', e => {
+          const i = e.target.dataset.index;
+          const newQty = parseInt(e.target.value);
+          cartItems[i].quantity = newQty > 0 ? newQty : 1;
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+          renderCart();
+        });
+      });
+    }
+
+    renderCart();
+  </script>
 </body>
 </html>

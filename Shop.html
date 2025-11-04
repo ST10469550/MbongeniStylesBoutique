@@ -29,7 +29,7 @@
 
   <!-- Search & Filter -->
   <section class="shop-controls">
-    <input type="text" placeholder="Search products..." />
+    <input id="searchInput" type="text" placeholder="Search products... try typing 'Jacket' or 'Gold'" />
     <div class="filters">
       <button onclick="filterCategory('women')">Women</button>
       <button onclick="filterCategory('men')">Men</button>
@@ -37,6 +37,7 @@
       <button onclick="filterCategory('coming')">Coming Soon</button>
       <button onclick="filterCategory('all')">All</button>
     </div>
+    <p id="noResults">⚠️ No matching products found. Try another keyword.</p>
   </section>
 
   <!-- Product Sections -->
@@ -164,6 +165,7 @@
 
   <!-- Scripts -->
   <script>
+    // FILTER BY CATEGORY
     function filterCategory(category) {
       const sections = document.querySelectorAll('.product-category');
       sections.forEach(section => {
@@ -171,9 +173,8 @@
       });
     }
 
-    // Add to Cart Functionality
+    // ADD TO CART FUNCTIONALITY
     const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-
     document.querySelectorAll('article button').forEach(button => {
       button.addEventListener('click', () => {
         const card = button.closest('article');
@@ -185,8 +186,33 @@
         cart.push(item);
         localStorage.setItem('cartItems', JSON.stringify(cart));
 
-        alert(`${name} added to cart!`);
+        alert(`✅ ${name} has been added to your cart.`);
       });
+    });
+
+    // SEARCH BAR FUNCTIONALITY WITH ERROR HANDLING
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      const products = document.querySelectorAll('article');
+      let matchFound = false;
+
+      products.forEach(product => {
+        const title = product.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(query)) {
+          product.style.display = 'block';
+          matchFound = true;
+        } else {
+          product.style.display = 'none';
+        }
+      });
+
+      const noResults = document.getElementById('noResults');
+      if (query === '') {
+        noResults.style.display = 'none';
+        products.forEach(p => p.style.display = 'block');
+      } else {
+        noResults.style.display = matchFound ? 'none' : 'block';
+      }
     });
   </script>
 

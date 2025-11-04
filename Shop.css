@@ -58,29 +58,67 @@ header p {
   text-align: center;
   margin: 40px 20px;
 }
-.shop-controls input {
-  padding: 10px;
+
+/* Search Input Styling */
+#searchInput {
+  padding: 10px 20px;
   width: 60%;
   max-width: 400px;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 20px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  outline: none;
+  background-color: #000;
+  color: white;
+  transition: all 0.3s ease;
 }
-.shop-controls .filters button {
-  background: gold;
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.shop-controls .filters button:hover {
-  background: black;
+#searchInput::placeholder {
   color: gold;
-  border: 1px solid gold;
+  opacity: 0.8;
+  font-weight: bold;
+}
+#searchInput:focus {
+  border-color: #ffbf00;
+  box-shadow: 0 0 10px gold;
+}
+
+/* Search Button */
+.shop-controls button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+.shop-controls button:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* No Results Message */
+#noResults {
+  display: none;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #ff4d4d;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: 2px solid #ff4d4d;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 15px auto;
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+  font-size: 1.1em;
+  animation: shake 0.5s ease;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }
 
 /* Section Titles */
@@ -148,6 +186,38 @@ article button:hover {
   border: 1px solid gold;
 }
 
+/* Search Results Grid (Boxes for Found Items) */
+#searchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+#searchResults .result-item {
+  background: #1a1a1a;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#searchResults .result-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+#searchResults .result-item img {
+  width: 100%;
+  max-height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+#searchResults .result-item h3 {
+  color: gold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
 /* Social Media Section */
 .follow-us {
   text-align: center;
@@ -186,6 +256,28 @@ footer {
   text-align: center;
   padding: 30px 20px;
   color: white;
+}
+
+/* Notification Styles (Add to Cart) */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1a1a1a;
+  color: gold;
+  border: 2px solid gold;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+}
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Animations */
