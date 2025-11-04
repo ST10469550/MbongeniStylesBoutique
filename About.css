@@ -1,103 +1,147 @@
 /* Base Styles */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #111;
-    color: #fff;
-  }
-  
-  /* Navigation */
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px 30px;
-    background: black;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  nav ul li a:hover {
-    color: gold;
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    padding: 120px 20px 60px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('images/MB.png') center/cover no-repeat;
-    color: white;
-  }
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 30px;
+  background: black;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: gold;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/MB.png') center/cover no-repeat;
+  color: white;
+}
+header h1 {
+  font-size: 2.5em;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+main section {
+  margin-bottom: 40px;
+}
+main h2 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 20px;
+}
+main p {
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Founder Image */
+main img {
+  display: block;
+  max-width: 300px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Follow Us Section */
+.follow-us {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+}
+.follow-us h2 {
+  font-size: 2em;
+  color: gold;
+  margin-bottom: 10px;
+}
+.follow-us p {
+  font-size: 1em;
+  max-width: 600px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  background: black;
+  text-align: center;
+  padding: 30px 20px;
+  color: white;
+}
+footer .socials {
+  margin-top: 10px;
+}
+footer .socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.6em;
+  transition: color 0.3s;
+}
+footer .socials a:hover {
+  color: gold;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+.shake {
+  animation: shake 1s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   header h1 {
-    font-size: 2.5em;
-    color: gold;
-    margin-bottom: 10px;
+    font-size: 2em;
   }
-  
-  /* Main Content */
   main {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 0 20px;
+    padding: 0 10px;
   }
-  main section {
-    margin-bottom: 40px;
-  }
-  main h2 {
-    text-align: center;
-    color: gold;
-    margin-bottom: 20px;
-  }
-  main p {
-    font-size: 1em;
-    line-height: 1.6;
-    text-align: center;
-  }
-  
-  /* Founder Image */
   main img {
-    display: block;
-    max-width: 300px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    max-width: 80%;
   }
-  
-  /* Footer */
-  footer {
-    background: black;
-    text-align: center;
-    padding: 30px 20px;
-    color: white;
+  .follow-us {
+    padding: 40px 10px;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2em;
-    }
-    main {
-      padding: 0 10px;
-    }
-    main img {
-      max-width: 80%;
-    }
-  }
-  
+}

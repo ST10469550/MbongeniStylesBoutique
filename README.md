@@ -4,7 +4,8 @@
 
 -[IMAGES](#IMAGES)
 -[GitHub Repository](#GitHubRepository)
--[P-2 Website Update Log ](#P-2WebsiteUpdateLog)
+-[P-2 Website Update Log](#P-2WebsiteUpdateLog)
+-[P-3 Website Update Log](#p-3-website-update-log)
 
 
 ## GitHub Repository:
@@ -98,6 +99,42 @@ This update was a big step forward — and I’m just getting started.
 
 
 
+# Mbongeni’s Style Boutique —  
+# P-3 Website Update Log  
+**Date:** 04 November 2025  
 
+## What I Worked On  
+This phase focused on enhancing interactivity, visual polish, and preparing the site for public launch. I wanted the boutique experience to feel bold, loud, and culturally expressive.
 
+## Changes I Made  
+### 1. Add to Cart Functionality  
+- Implemented JavaScript logic to store selected items in `localStorage`.  
+- Each product now adds to cart with a confirmation alert.  
+- Cart persists across sessions and pages.
 
+### 2. Section-Based Filtering  
+- Category buttons (Women, Men, Kids, Coming Soon) now filter products dynamically.  
+- Each homepage category image links directly to its section in `shop.html`.
+
+### 3. Social Media Integration  
+- Added social icons using Boxicons in both footer and dedicated section.  
+- Styled hover effects and responsive layout for mobile.
+
+### 4. Fancy Animations  
+- Introduced `fadeIn`, `slideUp`, and `bounceFade` animations for headers and product cards.  
+- Enhanced hover effects with scale and shadow transitions.
+
+### 5. README and CSS Cleanup  
+- Updated `README.md` to reflect new progress.  
+- Refactored `Shop.css` and `styles.css` for consistency and clarity.
+
+## Next Steps  
+- Build dynamic `cart.html` to display selected items  
+- Add featured product carousel  
+- Optimize image loading and performance  
+- Begin SEO and analytics setup
+
+## Final Thoughts  
+This update brought the boutique to life.  
+From bold visuals to interactive cart features, it now feels like a real shopping experience.  
+I’m excited to keep building — the vision is becoming reality.

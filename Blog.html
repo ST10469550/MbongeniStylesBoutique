@@ -4,10 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog - Mbongeni's Style Boutique</title>
-  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <style>
+    /* Modal Styles */
+    #modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    #modal img {
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      margin: 5% auto;
+      border-radius: 8px;
+    }
+    #modal span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
     <nav>
       <ul>
@@ -22,37 +54,78 @@
     <p>Stories of fashion, heritage, and bold expression</p>
   </header>
 
+  <!-- Blog Content -->
   <main>
     <section>
       <h2>Latest Posts</h2>
 
       <article>
         <h3>Brand Storytelling</h3>
-        <img src="images/BRAND STORY TELLING.png" alt="Brand Storytelling">
+        <img src="images/BRAND STORY TELLING.png" alt="Brand Storytelling" onclick="openModal(this.src)">
         <p>Discover how Mbongeni’s Style Boutique blends South African heritage with modern fashion narratives. From fabric selection to final stitch, every piece tells a story.</p>
         <a href="#">Read More</a>
       </article>
 
       <article>
         <h3>Founder Spotlight: Mbongeni Ndlovu</h3>
-        <img src="images/Founder Mbongeni.png" alt="Founder Mbongeni">
+        <img src="images/Founder Mbongeni.png" alt="Founder Mbongeni" onclick="openModal(this.src)">
         <p>Meet the visionary behind the brand. Mbongeni shares his journey from Durban’s streets to the boutique spotlight, and what inspires his signature style.</p>
         <a href="#">Read More</a>
       </article>
 
       <article>
         <h3>Coming Soon: Limited Edition Drop</h3>
-        <img src="images/COOMING SOON.png" alt="Coming Soon Promo">
+        <img src="images/COOMING SOON.png" alt="Coming Soon Promo" onclick="openModal(this.src)">
         <p>Get a sneak peek at our upcoming capsule collection featuring bold prints, elevated tailoring, and cultural motifs. This drop is not to be missed.</p>
         <a href="#">Read More</a>
       </article>
-
     </section>
   </main>
 
+  <!-- Modal -->
+  <div id="modal">
+    <span onclick="closeModal()">×</span>
+    <img id="modalImg" />
+  </div>
+
+
+<section class="follow-us">
+  <h2>Follow Us on Socials</h2>
+  <p>Stay connected with Mbongeni’s Style Boutique for exclusive drops, behind-the-scenes stories, and fashion inspiration.</p>
+  <div class="socials">
+    <a href="https://instagram.com/mbongenistyle" target="_blank" aria-label="Instagram">
+      <i class='bx bxl-instagram'></i>
+    </a>
+    <a href="https://facebook.com/mbongenistyle" target="_blank" aria-label="Facebook">
+      <i class='bx bxl-facebook'></i>
+    </a>
+    <a href="https://x.com/mbongenistyle" target="_blank" aria-label="Twitter">
+      <i class='bx bxl-twitter'></i>
+    </a>
+    <a href="https://www.tiktok.com/@mbongenistyle" target="_blank" aria-label="TikTok">
+      <i class='bx bxl-tiktok'></i>
+    </a>
+    <a href="https://www.youtube.com/@mbongenistyle" target="_blank" aria-label="YouTube">
+      <i class='bx bxl-youtube'></i>
+    </a>
+  </div>
+</section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Mbongeni’s Style Boutique</p>
   </footer>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    function openModal(src) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modalImg").src = src;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>

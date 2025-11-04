@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop - Mbongeni's Style Boutique</title>
   <link rel="stylesheet" href="Shop.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,6 +15,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
+      <li><a href="cart.html">Cart</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -31,12 +34,14 @@
       <button onclick="filterCategory('women')">Women</button>
       <button onclick="filterCategory('men')">Men</button>
       <button onclick="filterCategory('kids')">Kids</button>
+      <button onclick="filterCategory('coming')">Coming Soon</button>
       <button onclick="filterCategory('all')">All</button>
     </div>
   </section>
 
   <!-- Product Sections -->
   <main>
+    <!-- Women -->
     <section id="women" class="product-category">
       <h2>Women</h2>
       <div class="product-grid">
@@ -47,26 +52,27 @@
           <button>Add to Cart</button>
         </article>
         <article>
-          <img src="images/WMN DRESS__01.png" alt="Elegant Maxi Dress">
-          <h3>Elegant Maxi Dress</h3>
+          <img src="images/WMN Hoodies_01.png" alt="Elegant Maxi Hoodie">
+          <h3>Elegant Maxi Hoodie</h3>
           <p>R2,499.00</p>
           <button>Add to Cart</button>
         </article>
         <article>
-          <img src="images/WMN DRESS__02.png" alt="Printed Heritage Dress">
-          <h3>Printed Heritage Dress</h3>
+          <img src="images/WMN White T-Shit.png" alt="Printed T-Shirt">
+          <h3>Printed T-Shirt</h3>
           <p>R1,599.00</p>
           <button>Add to Cart</button>
         </article>
       </div>
     </section>
 
+    <!-- Men -->
     <section id="men" class="product-category">
       <h2>Men</h2>
       <div class="product-grid">
         <article>
-          <img src="images/MensJacket1.png" alt="Kente-Inspired T-Shirt">
-          <h3>Kente-Inspired T-Shirt</h3>
+          <img src="images/MEN LTD EDITION JACKEST.png" alt="Kente-Inspire Jacket">
+          <h3>Kente-Inspire Jacket (L.T.D)</h3>
           <p>R2,299.00</p>
           <button>Add to Cart</button>
         </article>
@@ -85,12 +91,13 @@
       </div>
     </section>
 
+    <!-- Kids -->
     <section id="kids" class="product-category">
       <h2>Kids</h2>
       <div class="product-grid">
         <article>
-          <img src="images/MEN T-Shirt__01.png" alt="Men T-Shirt">
-          <h3>Men T-Shirt</h3>
+          <img src="images/KIDS BOYS T-Shirts__01.png" alt="Boys T-Shirt">
+          <h3>Boys T-Shirt</h3>
           <p>R799.00</p>
           <button>Add to Cart</button>
         </article>
@@ -108,14 +115,54 @@
         </article>
       </div>
     </section>
+
+    <!-- Coming Soon -->
+    <section id="coming" class="product-category">
+      <h2>Coming Soon</h2>
+      <div class="product-grid">
+        <article>
+          <img src="images/COOMING SOON.png" alt="Limited Drop Teaser">
+          <h3>Limited Drop Teaser</h3>
+          <p>Coming Soon</p>
+        </article>
+        <article>
+          <img src="images/KIDS BOYS COOMING SOON.png" alt="KIDS's Preview">
+          <h3>Kid's Capsule Tracksuits</h3>
+          <p>Coming Soon</p>
+        </article>
+        <article>
+          <img src="images/MEN COOMING SOON__02.png" alt="Men's Capsule Preview">
+          <h3>Men's Capsule Preview</h3>
+          <p>Coming Soon</p>
+        </article>
+        <article>
+          <img src="images/WMN COOMING SOON__01.png" alt="Women Capsule Preview">
+          <h3>Women’s Capsule Preview</h3>
+          <p>Coming Soon</p>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <!-- Social Media Section -->
+  <section class="follow-us">
+    <h2>Follow Us on Socials</h2>
+    <p>Stay connected with Mbongeni’s Style Boutique for exclusive drops, behind-the-scenes stories, and fashion inspiration.</p>
+    <div class="socials">
+      <a href="https://instagram.com/mbongenistyle" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://facebook.com/mbongenistyle" target="_blank"><i class='bx bxl-facebook'></i></a>
+      <a href="https://x.com/mbongenistyle" target="_blank"><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.tiktok.com/@mbongenistyle" target="_blank"><i class='bx bxl-tiktok'></i></a>
+      <a href="https://www.youtube.com/@mbongenistyle" target="_blank"><i class='bx bxl-youtube'></i></a>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Mbongeni’s Style Boutique</p>
   </footer>
 
-  <!-- Filter Script -->
+  <!-- Scripts -->
   <script>
     function filterCategory(category) {
       const sections = document.querySelectorAll('.product-category');
@@ -123,6 +170,24 @@
         section.style.display = category === 'all' || section.id === category ? 'block' : 'none';
       });
     }
+
+    // Add to Cart Functionality
+    const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    document.querySelectorAll('article button').forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('article');
+        const name = card.querySelector('h3').textContent;
+        const price = card.querySelector('p').textContent;
+        const image = card.querySelector('img').src;
+
+        const item = { name, price, image };
+        cart.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cart));
+
+        alert(`${name} added to cart!`);
+      });
+    });
   </script>
 
 </body>

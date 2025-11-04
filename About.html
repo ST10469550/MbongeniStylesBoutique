@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - Mbongeni's Style Boutique</title>
   <link rel="stylesheet" href="About.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="description" content="Learn about Mbongeni's Style Boutique, a fashion brand rooted in South African heritage and modern design." />
+  <meta name="keywords" content="Mbongeni, fashion, boutique, South Africa, designer, heritage" />
+  <meta name="author" content="Mbongeni’s Style Boutique" />
+  <style>
+    @keyframes shake {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-5px); }
+      50% { transform: translateY(5px); }
+      75% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .shake {
+      animation: shake 1s ease-in-out infinite;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
     <nav>
       <ul>
@@ -17,28 +35,29 @@
         <li><a href="Contact.html">Contact</a></li>
       </ul>
     </nav>
-    <h1>About Mbongeni’s Style Boutique</h1>
+    <h1 class="shake">About Mbongeni’s Style Boutique</h1>
   </header>
 
+  <!-- Main Content -->
   <main>
     <section>
-      <h2>Our Story</h2>
+      <h2 class="shake">Our Story</h2>
       <p>
         Founded in the heart of South Africa, Mbongeni’s Style Boutique brings together traditional African aesthetics and contemporary fashion. Our goal is to make every customer feel bold, elegant, and authentic.
       </p>
     </section>
 
     <section>
-      <h2>Our Mission</h2>
+      <h2 class="shake">Our Mission</h2>
       <p>
         We aim to redefine modern fashion by celebrating African culture, heritage, and craftsmanship in every stitch.
-        To empower individuals to express their unique style through affordable, high-quality fashion inspired by South African heritage and global trends
+        To empower individuals to express their unique style through affordable, high-quality fashion inspired by South African heritage and global trends.
       </p>
     </section>
 
     <section>
-      <h2>Meet the Designer</h2>
-      <img src="images/Founder Mbongeni.png" alt="Mbongeni, the founder and designer">
+      <h2 class="shake">Meet the Designer</h2>
+      <img src="images/Founder Mbongeni.png" alt="Mbongeni, the founder and designer" style="max-width: 90%; border-radius: 8px; display: block; margin: 20px auto;" />
       <p>
         Mbongeni’s Style Boutique is a proudly South African fashion brand founded in 2018 by Mbongeni Ndlovu. 
         What began as a small retail shop in Durban has grown into a vibrant destination for stylish, high-quality clothing that celebrates local culture and diversity. 
@@ -48,8 +67,32 @@
     </section>
   </main>
 
+  <!-- Follow Us Section -->
+  <section class="follow-us">
+    <h2 class="shake">Follow Us on Socials</h2>
+    <p>Stay connected with Mbongeni’s Style Boutique for the latest drops, behind-the-scenes looks, and exclusive offers.</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Mbongeni’s Style Boutique</p>
+    <div class="socials">
+      <a href="https://instagram.com/mbongenistyle" target="_blank" aria-label="Instagram">
+        <i class='bx bxl-instagram'></i>
+      </a>
+      <a href="https://facebook.com/mbongenistyle" target="_blank" aria-label="Facebook">
+        <i class='bx bxl-facebook'></i>
+      </a>
+      <a href="https://x.com/mbongenistyle" target="_blank" aria-label="Twitter">
+        <i class='bx bxl-twitter'></i>
+      </a>
+      <a href="https://www.tiktok.com/@mbongenistyle" target="_blank" aria-label="TikTok">
+        <i class='bx bxl-tiktok'></i>
+      </a>
+      <a href="https://www.youtube.com/@mbongenistyle" target="_blank" aria-label="YouTube">
+        <i class='bx bxl-youtube'></i>
+      </a>
+    </div>
   </footer>
 
 </body>

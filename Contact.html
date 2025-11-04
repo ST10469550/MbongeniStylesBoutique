@@ -6,7 +6,22 @@
   <title>Contact Us - Mbongeni's Style Boutique</title>
   <link rel="stylesheet" href="contact.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="description" content="Contact Mbongeni's Style Boutique for feedback, questions, or collaboration. Visit our Johannesburg and Durban boutiques." />
+  <meta name="keywords" content="Mbongeni, contact, fashion, boutique, Johannesburg, Durban" />
+  <meta name="author" content="Mbongeni’s Style Boutique" />
+  <style>
+    @keyframes shake {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-5px); }
+      50% { transform: translateY(5px); }
+      75% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .shake {
+      animation: shake 1s ease-in-out infinite;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,15 +37,15 @@
 
   <!-- Header -->
   <header>
-    <h1>Get in Touch</h1>
+    <h1 class="shake">Get in Touch</h1>
     <p>We’d love to hear from you—whether it’s feedback, questions, or collaboration ideas.</p>
   </header>
 
   <!-- Contact Form -->
   <main>
     <section class="contact-form">
-      <h2>Send us a message</h2>
-      <form>
+      <h2 class="shake">Send us a message</h2>
+      <form id="contactForm">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required />
 
@@ -41,12 +56,13 @@
         <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Submit</button>
+        <p id="formMessage"></p>
       </form>
     </section>
 
     <!-- Locations -->
     <section class="locations">
-      <h2>Visit Us</h2>
+      <h2 class="shake">Visit Us</h2>
 
       <article>
         <h3>Johannesburg Boutique</h3>
@@ -72,17 +88,62 @@
         </iframe>
       </article>
     </section>
+
+    <!-- Follow Us Section -->
+    <section class="follow-us">
+      <h2 class="shake">Follow Us on Socials</h2>
+      <p>Stay connected with Mbongeni’s Style Boutique for the latest drops, behind-the-scenes looks, and exclusive offers.</p>
+    </section>
   </main>
 
   <!-- Footer with Socials -->
   <footer>
     <p>&copy; 2025 Mbongeni’s Style Boutique</p>
     <div class="socials">
-      <a href="https://instagram.com/mbongenistyle" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/mbongenistyle" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://x.com/mbongenistyle" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/mbongenistyle" target="_blank" aria-label="Instagram">
+        <i class='bx bxl-instagram'></i>
+      </a>
+      <a href="https://facebook.com/mbongenistyle" target="_blank" aria-label="Facebook">
+        <i class='bx bxl-facebook'></i>
+      </a>
+      <a href="https://x.com/mbongenistyle" target="_blank" aria-label="Twitter">
+        <i class='bx bxl-twitter'></i>
+      </a>
+      <a href="https://www.tiktok.com/@mbongenistyle" target="_blank" aria-label="TikTok">
+        <i class='bx bxl-tiktok'></i>
+      </a>
+      <a href="https://www.youtube.com/@mbongenistyle" target="_blank" aria-label="YouTube">
+        <i class='bx bxl-youtube'></i>
+      </a>
     </div>
   </footer>
+
+  <!-- JavaScript Validation -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const formMessage = document.getElementById("formMessage");
+
+      if (!name || !email || !message) {
+        formMessage.textContent = "Please fill in all fields.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        formMessage.textContent = "Invalid email format.";
+        formMessage.style.color = "red";
+        return;
+      }
+
+      formMessage.textContent = "Message sent successfully!";
+      formMessage.style.color = "green";
+    });
+  </script>
 
 </body>
 </html>

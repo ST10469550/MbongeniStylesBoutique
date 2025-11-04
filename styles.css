@@ -54,60 +54,62 @@ header p {
 }
 
 /* Hero Section */
-section#hero-heading {
+section.hero {
   text-align: center;
   padding: 60px 20px;
 }
-section#hero-heading h2 {
+section.hero h2 {
   font-size: 2.5em;
   color: gold;
   animation: fadeInUp 1s ease-out forwards;
 }
-section#hero-heading p {
+section.hero p {
   font-size: 1.1em;
   margin: 10px auto 20px;
   max-width: 600px;
-  text-align: center;
   animation: fadeInUp 1.2s ease-out forwards;
 }
-section#hero-heading a {
+.shop-now-btn {
   display: inline-block;
   background: gold;
   color: black;
-  padding: 10px 20px;
+  font-size: 1.2em;
   font-weight: bold;
-  border-radius: 5px;
+  padding: 15px 30px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
   animation: fadeInUp 1.4s ease-out forwards;
 }
-section#hero-heading a:hover {
+.shop-now-btn:hover {
   background: black;
   color: gold;
-  border: 1px solid gold;
+  border: 2px solid gold;
+  transform: scale(1.05);
 }
 
 /* Coming Soon */
-section#coming-heading {
+section.coming-soon {
   text-align: center;
   padding: 60px 20px;
 }
-section#coming-heading h2 {
+section.coming-soon h2 {
   font-size: 2em;
   color: gold;
 }
-section#coming-heading p {
+section.coming-soon p {
   font-size: 1em;
   max-width: 600px;
-  margin: auto;
-  margin-bottom: 20px;
-  text-align: center;
+  margin: auto auto 20px;
 }
-section#coming-heading img {
-  max-width: 100%;
+section.coming-soon img {
+  max-width: 90%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Product Categories */
@@ -126,6 +128,7 @@ section ul {
   gap: 20px;
   list-style: none;
   padding: 0;
+  justify-items: center;
 }
 section ul li {
   background: #1a1a1a;
@@ -148,6 +151,39 @@ figcaption h4 {
   color: gold;
 }
 
+/* Category Card Hover */
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Centered Figures */
+figure.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+figure.centered img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Smaller Blog Images */
+.small-img img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px auto;
+  display: block;
+}
+
 /* Blog Section */
 section#blog {
   padding: 60px 20px;
@@ -167,17 +203,19 @@ section#blog h3 {
   margin: 10px 0;
 }
 section#blog img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Newsletter */
-section#newsletter-heading {
+section#newsletter {
   padding: 60px 20px;
   text-align: center;
 }
-section#newsletter-heading h2 {
+section#newsletter h2 {
   font-size: 2em;
   color: gold;
   margin-bottom: 20px;
@@ -229,6 +267,19 @@ section#locations h3 {
   color: gold;
 }
 
+/* Map Section */
+section#map {
+  padding: 60px 20px;
+  text-align: center;
+}
+section#map iframe {
+  border-radius: 8px;
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
 /* Footer */
 footer {
   background: black;
@@ -255,6 +306,21 @@ footer nav ul li a:hover {
   color: gold;
 }
 
+/* Social Icons */
+.socials {
+  margin-top: 20px;
+}
+.socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.6em;
+  transition: color 0.3s, transform 0.3s;
+}
+.socials a:hover {
+  color: gold;
+  transform: scale(1.2);
+}
+
 /* Animation */
 @keyframes fadeInUp {
   from {
@@ -279,7 +345,7 @@ footer nav ul li a:hover {
   header h1 {
     font-size: 2em;
   }
-  section#hero-heading h2 {
+  section.hero h2 {
     font-size: 2em;
   }
 }
