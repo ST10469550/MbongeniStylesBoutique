@@ -124,12 +124,13 @@ This phase focused on enhancing interactivity, visual polish, and preparing the 
 - Introduced `fadeIn`, `slideUp`, and `bounceFade` animations for headers and product cards.  
 - Enhanced hover effects with scale and shadow transitions.
 
-### 5. README and CSS Cleanup  
+### 5. README, CSS and JS Cleanup   
 - Updated `README.md` to reflect new progress.  
 - Refactored `Shop.css` and `styles.css` for consistency and clarity.
-
+- Refactored 'Shop.html (Search Bar Functionalty and error handling)
+  
 ## Next Steps  
-- Build dynamic `cart.html` to display selected items  
+- Fixing `cart.html` to display selected items  
 - Add featured product carousel  
 - Optimize image loading and performance  
 - Begin SEO and analytics setup
